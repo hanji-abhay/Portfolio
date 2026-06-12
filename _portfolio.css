@@ -592,34 +592,40 @@
     footer span { color: var(--cyan); }
 
     /* ─── RESPONSIVE ─── */
-    /* ─── ENHANCED RESPONSIVE DESIGN ─── */
 @media (max-width: 768px) {
   body { 
     overflow-x: hidden; 
   }
   
   section {
-    min-height: auto;               /* Removes forced full-viewport height */
-    padding: 60px 24px 80px;        /* Balanced padding for section spacing */
+    min-height: auto !important;     /* Force layout to shrink to content height */
+    padding: 80px 24px 100px;        /* Added breathing room for the bottom dock */
   }
 
   #hero {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse;  /* Stacks your avatar ABOVE your text on mobile */
     text-align: center;
     gap: 32px;
     min-height: auto;
     padding-top: 60px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-name {
-    font-size: clamp(38px, 10vw, 52px); /* Prevents titles from spilling out */
+    font-size: clamp(38px, 10vw, 52px); 
+    line-height: 1.1;
   }
 
   .hero-desc {
     margin: 0 auto 32px;
     max-width: none;
-    font-size: 16px;                /* Enhanced reading size */
+    font-size: 16px;                
   }
 
   .hero-buttons {
@@ -642,6 +648,14 @@
     height: min(65vw, 240px); 
   }
 
+  /* Structural Grid Fixes: Stacks multi-columns vertically */
+  .about-grid,
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr !important; 
+    gap: 24px;
+  }
+
   .about-facts {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -654,33 +668,33 @@
   }
 
   .project-links {
-    flex-direction: row;            /* Keeps links clean horizontally */
+    flex-direction: row;            
     align-items: center;
     gap: 16px;
   }
 
-  /* Improved Mac Dock for Mobile Touch Surfaces */
+  /* Dock Fix: Centers it properly without hiding content */
   .mac-dock {
     width: fit-content;
     max-width: 92%;
     justify-content: center;
-    gap: 14px;                      /* Extra breathing room between touch targets */
+    gap: 14px;                      
     padding: 12px 18px;
     bottom: 20px;
   }
 
   .dock-icon {
-    width: 50px;                    /* Enlarged touch target matching Apple's HIG rules */
+    width: 50px;                    
     height: 50px;
     font-size: 20px;
   }
 
   .dock-label { 
-    display: none; 
+    display: none !important;        /* Prevents desktop hover elements from popping up on touch */
   }
 
   footer {
-    padding-bottom: 110px;          /* Extra clearance space above the dock */
+    padding-bottom: 110px;          
   }
 }
 
@@ -697,6 +711,7 @@
 
   .section-title {
     margin-bottom: 36px;
+    font-size: 32px;
   }
 
   .hero-name {
@@ -707,23 +722,17 @@
     font-size: 20px;
   }
 
-  /* Elevated Font Scales for Pristine Readability */
   .hero-desc,
   .about-text p,
   .contact-text,
   .project-desc {
     font-size: 16px; 
-    line-net-height: 1.75;
+    line-height: 1.75;              /*  Fixed typo here */
   }
 
   .about-facts {
-    grid-template-columns: 1fr;    /* Stacks data properly to avoid cramming numbers */
+    grid-template-columns: 1fr;    
     gap: 14px;
-  }
-
-  .skills-grid,
-  .projects-grid {
-    gap: 20px;
   }
 
   .project-card {
@@ -736,7 +745,6 @@
     font-size: 22px;
   }
 
-  /* Ultra-Optimized Pocket Screen Dock */
   .mac-dock {
     width: auto;
     gap: 10px;
@@ -744,7 +752,7 @@
   }
 
   .dock-icon {
-    width: 48px;                     /* Minimum 48px standard for seamless mobile taps */
+    width: 48px;                     
     height: 48px;
     font-size: 18px;
   }
