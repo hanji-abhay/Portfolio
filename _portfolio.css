@@ -592,26 +592,160 @@
     footer span { color: var(--cyan); }
 
     /* ─── RESPONSIVE ─── */
-    @media (max-width: 768px) {
-      body{overflow-x: hidden;}
-      section { padding: 80px 24px 60px; }
+    /* ─── ENHANCED RESPONSIVE DESIGN ─── */
+@media (max-width: 768px) {
+  body { 
+    overflow-x: hidden; 
+  }
+  
+  section {
+    min-height: auto;               /* Removes forced full-viewport height */
+    padding: 60px 24px 80px;        /* Balanced padding for section spacing */
+  }
 
-      #hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 40px;
-        padding-top: 80px;
-      }
+  #hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 32px;
+    min-height: auto;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
 
-      .hero-desc { margin: 0 auto 32px; }
-      .hero-buttons { justify-content: center; }
-      .hero-right { flex: none; }
-      .hero-avatar-wrap { width: 200px; height: 200px; }
-      .hero-avatar-inner { font-size: 70px; }
+  .hero-name {
+    font-size: clamp(38px, 10vw, 52px); /* Prevents titles from spilling out */
+  }
 
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .about-facts { grid-template-columns: 1fr 1fr; }
+  .hero-desc {
+    margin: 0 auto 32px;
+    max-width: none;
+    font-size: 16px;                /* Enhanced reading size */
+  }
 
-      .mac-dock { width: 90%; justify-content: center; gap: 8px; padding: 10px 12px; }
-      .dock-icon { width: 44px; height: 44px; font-size: 18px; }
-    }
+  .hero-buttons {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-right { 
+    flex: none; 
+  }
+  
+  .hero-avatar-wrap { 
+    width: min(65vw, 240px); 
+    height: min(65vw, 240px); 
+  }
+
+  .about-facts {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .fact-card,
+  .skill-category,
+  .project-card { 
+    padding: 24px; 
+  }
+
+  .project-links {
+    flex-direction: row;            /* Keeps links clean horizontally */
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Improved Mac Dock for Mobile Touch Surfaces */
+  .mac-dock {
+    width: fit-content;
+    max-width: 92%;
+    justify-content: center;
+    gap: 14px;                      /* Extra breathing room between touch targets */
+    padding: 12px 18px;
+    bottom: 20px;
+  }
+
+  .dock-icon {
+    width: 50px;                    /* Enlarged touch target matching Apple's HIG rules */
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .dock-label { 
+    display: none; 
+  }
+
+  footer {
+    padding-bottom: 110px;          /* Extra clearance space above the dock */
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .section-title {
+    margin-bottom: 36px;
+  }
+
+  .hero-name {
+    font-size: clamp(34px, 12vw, 42px);
+  }
+
+  .hero-role {
+    font-size: 20px;
+  }
+
+  /* Elevated Font Scales for Pristine Readability */
+  .hero-desc,
+  .about-text p,
+  .contact-text,
+  .project-desc {
+    font-size: 16px; 
+    line-net-height: 1.75;
+  }
+
+  .about-facts {
+    grid-template-columns: 1fr;    /* Stacks data properly to avoid cramming numbers */
+    gap: 14px;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 22px;
+  }
+
+  .contact-link {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  /* Ultra-Optimized Pocket Screen Dock */
+  .mac-dock {
+    width: auto;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .dock-icon {
+    width: 48px;                     /* Minimum 48px standard for seamless mobile taps */
+    height: 48px;
+    font-size: 18px;
+  }
+}
