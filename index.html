@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhay Mathur | Web & Python Developer</title>
+  <title>Abhay Mathur | Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!-- Favicon - Artistic Code Theme -->
+  <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="favicon.png" sizes="180x180">
   <link rel="stylesheet" href="_portfolio.css">
 </head>
 <body>
@@ -17,10 +20,10 @@
     <div class="hero-left">
       <p class="hero-tag">// hello world</p>
       <h1 class="hero-name">Abhay Mathur</h1>
-      <p class="hero-role">Web Developer · <span>Python Developer</span> · Creative Designer</p>
+      <p class="hero-role">Full-Stack Developer · <span>Python & Django</span> · Creative Designer</p>
       <p class="hero-desc">
         BCA student at IMR Ghaziabad, building clean interfaces and thoughtful backends.
-        I write code that works and design experiences that feel alive.
+        Currently deepening MERN stack skills — I write code that works and design experiences that feel alive.
       </p>
       <div class="hero-buttons">
         <a href="#projects" class="btn-primary">View My Work</a>
@@ -61,7 +64,7 @@
       </div>
       <div class="about-facts">
         <div class="fact-card">
-          <span class="fact-number">7+</span>
+          <span class="fact-number">11+</span>
           <span class="fact-label">GitHub Projects</span>
         </div>
         <div class="fact-card">
@@ -69,7 +72,7 @@
           <span class="fact-label">Graduation Year</span>
         </div>
         <div class="fact-card">
-          <span class="fact-number">8+</span>
+          <span class="fact-number">10+</span>
           <span class="fact-label">Technologies</span>
         </div>
         <div class="fact-card">
@@ -90,8 +93,9 @@
         <div class="skill-tags">
           <span class="skill-tag">HTML5</span>
           <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">JavaScript (ES6+)</span>
           <span class="skill-tag">Responsive Design</span>
+          <span class="skill-tag">React ↗</span>
         </div>
       </div>
       <div class="skill-category">
@@ -101,6 +105,7 @@
           <span class="skill-tag">Django</span>
           <span class="skill-tag">MySQL</span>
           <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Node.js ↗</span>
         </div>
       </div>
       <div class="skill-category">
@@ -110,24 +115,51 @@
           <span class="skill-tag">File Handling</span>
           <span class="skill-tag">Exception Handling</span>
           <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Plotly</span>
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-cat-title">🛠️ Tools</div>
+        <div class="skill-cat-title">🛠️ Tools & Infra</div>
         <div class="skill-tags">
           <span class="skill-tag">Git</span>
           <span class="skill-tag">GitHub</span>
           <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">Render</span>
+          <span class="skill-tag">Google Search Console</span>
         </div>
       </div>
     </div>
+    <p class="skills-note">↗ Currently learning</p>
   </section>
 
   <!-- ═══ PROJECTS ═══ -->
-<section id="projects">
+  <section id="projects">
     <p class="section-label">03 // projects</p>
     <h2 class="section-title">Things I've Built</h2>
     <div class="projects-grid">
+
+     <div class="project-card">
+        <span class="project-icon">🌸</span>
+        <h3 class="project-title">Personal Diary & To-Do App</h3>
+        <p class="project-desc">
+          A delightful personal diary and task manager featuring customizable themes, animated diary cover, secure PIN protection, full CRUD operations for entries & tasks, and persistent LocalStorage. Built with smooth interactions and responsive design to create an intimate, joyful writing experience.
+        </p>
+        <div class="project-techs">
+          <span class="project-tech">HTML5</span>
+          <span class="project-tech">CSS3 (Animations & Themes)</span>
+          <span class="project-tech">Vanilla JavaScript (ES6+)</span>
+          <span class="project-tech">LocalStorage</span>
+          <span class="project-tech">SVG Graphics</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/hanji-abhay/personal-diary-to-do-app" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://hanji-abhay.github.io/personal-diary-to-do-app/" target="_blank" class="project-link">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+      </div>
 
       <div class="project-card">
         <span class="project-icon">🏥</span>
@@ -139,7 +171,7 @@
           <span class="project-tech">Django</span>
           <span class="project-tech">MySQL</span>
           <span class="project-tech">Google Calendar API</span>
-          <span class="project-tech">Serverless</span>
+          <span class="project-tech">Gmail SMTP</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/hanji-abhay/banao-hms" target="_blank" class="project-link">
@@ -148,11 +180,30 @@
         </div>
       </div>
 
-       <div class="project-card">
+      <div class="project-card">
+        <span class="project-icon">🏢</span>
+        <h3 class="project-title">Big Boss Awning & Canopies</h3>
+        <p class="project-desc">
+          A fully deployed live business website built for a real local client. Engineered production asset delivery with WhiteNoise, managed full cloud infrastructure on Render, and integrated XML sitemaps with Google Search Console achieving 100% URL discovery and live search indexation.
+        </p>
+        <div class="project-techs">
+          <span class="project-tech">Django</span>
+          <span class="project-tech">MySQL</span>
+          <span class="project-tech">HTML/CSS/JS</span>
+          <span class="project-tech">Render</span>
+        </div>
+        <div class="project-links">
+          <a href="https://bigbossawningandcanopies.onrender.com" target="_blank" class="project-link">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
         <span class="project-icon">📋</span>
         <h3 class="project-title">InternTrack</h3>
         <p class="project-desc">
-          A modern internship application tracker that helps organize job applications, manage statuses, track progress, and keep internship searches structured with local browser storage.
+          A modern internship application tracker to organize job applications, manage statuses, track progress, and keep internship searches structured. Built entirely with vanilla HTML, CSS, and JavaScript — no framework dependencies.
         </p>
         <div class="project-techs">
           <span class="project-tech">HTML</span>
@@ -171,73 +222,85 @@
       </div>
 
       <div class="project-card">
-        <span class="project-icon">🏢</span>
-        <h3 class="project-title">Big Boss Awning & Canopies</h3>
-        <p class="project-desc">A fully deployed live business website for a real client. Clean professional design with Django backend.</p>
+        <span class="project-icon">🐍</span>
+        <h3 class="project-title">PyCodeLab</h3>
+        <p class="project-desc">
+          A structured Python practice repository covering core basics, data structures, OOP, and mini projects. Built as a disciplined learning log — clean, organized, and growing. Reflects a build-first approach to mastering Python fundamentals from the ground up.
+        </p>
         <div class="project-techs">
-          <span class="project-tech">HTML</span>
-          <span class="project-tech">CSS</span>
-          <span class="project-tech">JavaScript</span>
-          <span class="project-tech">Django</span>
+          <span class="project-tech">Python</span>
+          <span class="project-tech">OOP</span>
+          <span class="project-tech">Data Structures</span>
         </div>
         <div class="project-links">
-          <a href="https://bigbossawningandcanopies.onrender.com" target="_blank" class="project-link"><i class="fa fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://github.com/hanji-abhay/PyCodeLab" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
       </div>
 
       <div class="project-card">
         <span class="project-icon">❤️</span>
         <h3 class="project-title">You Can't Say No</h3>
-        <p class="project-desc">Chaotic interactive JavaScript experience with playful UI mechanics that make saying no impossible.</p>
+        <p class="project-desc">Chaotic interactive JavaScript experience with playful UI mechanics — real-time mouse tracking and dynamic element repositioning make saying no literally impossible.</p>
         <div class="project-techs">
           <span class="project-tech">HTML</span>
           <span class="project-tech">CSS</span>
           <span class="project-tech">JavaScript</span>
+          <span class="project-tech">DOM Manipulation</span>
         </div>
         <div class="project-links">
-          <a href="https://hanji-abhay.github.io/you-cant-say-no/valentine.html" target="_blank" class="project-link"><i class="fa fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://hanji-abhay.github.io/you-cant-say-no/valentine.html" target="_blank" class="project-link">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
         </div>
       </div>
 
       <div class="project-card">
         <span class="project-icon">📝</span>
         <h3 class="project-title">Text Analyzer</h3>
-        <p class="project-desc">Python-powered text analysis tool — word count, frequency analysis, meaningful insights from any text.</p>
+        <p class="project-desc">Python-powered text analysis CLI tool — word count, frequency analysis, palindrome detection, and meaningful insights from any text input. Built with clean OOP architecture and file handling.</p>
         <div class="project-techs">
           <span class="project-tech">Python</span>
           <span class="project-tech">OOP</span>
           <span class="project-tech">File Handling</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/hanji-abhay/TextAnalyzer" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/hanji-abhay/TextAnalyzer" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
       </div>
 
       <div class="project-card">
         <span class="project-icon">📚</span>
         <h3 class="project-title">Library Management System</h3>
-        <p class="project-desc">Full-featured library system with Python & MySQL. Book records, member management, issue/return tracking.</p>
+        <p class="project-desc">Full-featured library system with Python & MySQL. Book records, member management, issue/return tracking with status-based workflows and text report generation.</p>
         <div class="project-techs">
           <span class="project-tech">Python</span>
           <span class="project-tech">MySQL</span>
           <span class="project-tech">OOP</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/hanji-abhay/library-management-system-python-mysql" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://github.com/hanji-abhay/library-management-system-python-mysql" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
       </div>
 
       <div class="project-card">
         <span class="project-icon">🔍</span>
         <h3 class="project-title">Google Clone</h3>
-        <p class="project-desc">Pixel-perfect Google homepage clone showcasing attention to UI detail and clean frontend fundamentals.</p>
+        <p class="project-desc">Pixel-perfect Google homepage clone showcasing attention to UI detail and clean frontend fundamentals. Focuses on layout precision and responsive behavior.</p>
         <div class="project-techs">
           <span class="project-tech">HTML</span>
           <span class="project-tech">CSS</span>
           <span class="project-tech">JavaScript</span>
         </div>
         <div class="project-links">
-          <a href="https://hanji-abhay.github.io/google-clone" target="_blank" class="project-link"><i class="fa fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://hanji-abhay.github.io/google-clone" target="_blank" class="project-link">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
         </div>
       </div>
 
@@ -257,7 +320,7 @@
       <br>
       <p class="contact-note">or just</p>
       <a href="https://wa.me/7065667480" class="btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp Me</a>
-       <br>
+      <br>
       <p class="contact-note">I'm also on</p>
       <div class="contact-links">
         <a href="https://github.com/hanji-abhay" target="_blank" class="contact-link"><i class="fab fa-github"></i></a>
