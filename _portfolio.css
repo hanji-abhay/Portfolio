@@ -769,3 +769,105 @@
         font-size: 16px;
       }
     }
+
+    /* ─── EXPERIENCE ─── */
+    #experience { background: var(--navy); }
+
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .exp-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(100,255,218,0.08);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--purple));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .exp-card:hover::before { transform: scaleX(1); }
+
+    .exp-card:hover {
+      border-color: rgba(100,255,218,0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .exp-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .exp-company {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+    }
+
+    .exp-company span { color: var(--cyan); }
+
+    .exp-date {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--cyan);
+      background: var(--cyan-dim);
+      padding: 6px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .exp-bullets li {
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.7;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .exp-bullets li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+    }
+
+    .exp-bullets li span { color: var(--cyan); }
+
+    @media (max-width: 768px) {
+      .exp-card { padding: 20px; }
+      .exp-header { flex-direction: column; gap: 10px; }
+    }
